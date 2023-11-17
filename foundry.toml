@@ -2,5 +2,31 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+solc = "0.8.20"
 
-# See more config options https://github.com/foundry-rs/foundry/tree/master/config
+[profile.default.ir]
+enabled = true
+
+[rpc_endpoints]
+localhost = "http://localhost:8545"
+scrollSepolia = "${SCROLL_SEPOLIA_RPC}"
+baseGoerli = "${BASE_GOERLI_RPC}"
+zksyncEraTestnet = "${ZKSYNC_ERA_TESTNET_RPC}"
+gnosis = "${GNOSIS_RPC}"
+arbitrumGoerli = "${ARB_GOERLI_RPC}"
+polygonZkEvmTestnet = "${POLYGON_ZKEVM_TESTNET_RPC}"
+mantleTestnet = "${MANTLE_TESTNET_RPC}"
+celoAlfajores = "${CELO_ALFAJORES_RPC}"
+neonDevnet = "${NEON_DEVNET_RPC}"
+
+[etherscan]
+scroll = {key = "${SCROLLSCAN_KEY}", url = "https://api-sepolia.scrollscan.com/api"}
+base = {key = "${BASESCAN_KEY}", url = "https://api-goerli.basescan.org/api"}
+gnosis = {key = "${GNOSISSCAN_KEY}", url = "https://api.gnosisscan.io/api"}
+arbitrum = {key = "${ARBISCAN_KEY}", url = "https://api-goerli.arbiscan.io/api"}
+polygonzkevm = {key = "${POLYGONSCANZKEVM_KEY}", url = "https://api-testnet-zkevm.polygonscan.com/api"}
+celo = {key = "${CELOSCAN_KEY}", url = "https://api-alfajores.celoscan.io/api"}
+
+# deploy notes
+# forge script script/PostAndResolver.s.sol:Deploy --rpc-url $ARB_GOERLI_RPC --private-key $PRIVATE_KEY --broadcast --verify --verifier-url https://api-goerli.arbiscan.io/api -vvvv
+# to create a bash script called deploy to make this process easier, maybe a simple CLI to manage the contracts on the different chain
