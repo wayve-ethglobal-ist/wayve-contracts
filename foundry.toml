@@ -18,6 +18,7 @@ polygonZkEvmTestnet = "${POLYGON_ZKEVM_TESTNET_RPC}"
 mantleTestnet = "${MANTLE_TESTNET_RPC}"
 celoAlfajores = "${CELO_ALFAJORES_RPC}"
 neonDevnet = "${NEON_DEVNET_RPC}"
+filecoinTestnet = "${FILECOIN_TESTNET_RPC}"
 
 [etherscan]
 scroll = {key = "${SCROLLSCAN_KEY}", url = "https://api-sepolia.scrollscan.com/api"}
