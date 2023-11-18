@@ -2,7 +2,7 @@
 src = "src"
 out = "out"
 libs = ["lib"]
-solc = "0.8.20"
+solc = "0.8.23"
 
 [profile.default.ir]
 enabled = true
@@ -29,57 +29,57 @@ polygonzkevm = {key = "${POLYGONSCANZKEVM_KEY}", url = "https://api-testnet-zkev
 celo = {key = "${CELOSCAN_KEY}", url = "https://api-alfajores.celoscan.io/api"}
 
 # deploy notes
-# forge script script/PostAndResolver.s.sol:Deploy --rpc-url $ARB_GOERLI_RPC --private-key $PRIVATE_KEY --broadcast --verify --verifier-url https://api-goerli.arbiscan.io/api -vvvv
+# forge script script/ERC6551Account.s.sol:Deploy --rpc-url --broadcast --verify -vvvv
 # to create a bash script called deploy to make this process easier, maybe a simple CLI to manage the contracts on the different chain
 
 # Chain notes
 
 # scroll :-
 ## funds ✅ 
-## erc6551 registry ✅
-## erc6551 account implementation 
+## erc6551 registry ✅ = default address
+## erc6551 account implementation ✅ = we deploy (0x30F53D30C8aE4a8Ad6115117aEc1FE62db7e6AE1)
 ## entrypoint 
 
 # base 
 ## funds ✅
-## erc6551 registry ✅
+## erc6551 registry ✅ = default address
 ## erc6551 account implementation ✅
 ## entrypoint 
 
 # zksyncera 
 ## funds ✅
 ## erc6551 registry ✅ = we deploy (0x8b7900E312111A7e94C6006BB9e468A54105Eb1e)
-## erc6551 account implementation 
-## entrypoint
+## erc6551 account implementation (missing opcode, skipped this)
+## entrypoint (skip this, AA is native)
 
 # gnosis 
 ## funds ✅
-## erc6551 registry ✅
-## erc6551 account implementation
+## erc6551 registry ✅ = default address
+## erc6551 account implementation ✅ = we deploy (0x544515BB43Cd609a351abeD097a2d43C1C75a994)
 ## entrypoint
 
 # arbitrum 
 ## funds ✅
-## erc6551 registry ✅
-## erc6551 account implementation
+## erc6551 registry ✅ = default address
+## erc6551 account implementation ✅ = we deploy (0x544515BB43Cd609a351abeD097a2d43C1C75a994)
 ## entrypoint
 
 # polygonzkevm
 ## funds ✅
 ## erc6551 registry ✅ = we deploy (0x000000006551c19487814612e58FE06813775758)
-## erc6551 account implementation
+## erc6551 account implementation ✅ = we deploy (0xB4954D821815f7DEC998E08c8c3D303DCF0E6586)
 ## entrypoint
 
 # celo
 ## funds ✅
 ## erc6551 registry ✅ = we deploy (0x000000006551c19487814612e58FE06813775758)
-## erc6551 account implementation
+## erc6551 account implementation ✅ = we deploy (0xB4954D821815f7DEC998E08c8c3D303DCF0E6586)
 ## entrypoint
 
 # mantle 
 ## funds ✅
 ## erc6551 registry ✅ = we deploy (0x000000006551c19487814612e58FE06813775758)
-## erc6551 account implementation
+## erc6551 account implementation ✅ = we deploy (0xB4954D821815f7DEC998E08c8c3D303DCF0E6586)
 ## entrypoint
 
 # neon 
