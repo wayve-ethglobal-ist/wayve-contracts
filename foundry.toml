@@ -33,6 +33,7 @@ celo = {key = "${CELOSCAN_KEY}", url = "https://api-alfajores.celoscan.io/api"}
 # to create a bash script called deploy to make this process easier, maybe a simple CLI to manage the contracts on the different chain
 
 # Chain notes
+
 # scroll :-
 ## funds ✅ 
 ## erc6551 registry ✅
@@ -71,24 +72,22 @@ celo = {key = "${CELOSCAN_KEY}", url = "https://api-alfajores.celoscan.io/api"}
 
 # celo
 ## funds ✅
-## erc6551 registry ✅
+## erc6551 registry ✅ = we deploy (0x000000006551c19487814612e58FE06813775758)
 ## erc6551 account implementation
 ## entrypoint
 
 # mantle 
-## funds got
-## erc6551 registry
+## funds ✅
+## erc6551 registry ✅ = we deploy (0x000000006551c19487814612e58FE06813775758)
 ## erc6551 account implementation
 ## entrypoint
 
 # neon 
 ## funds ✅
-## erc6551 registry 
+## erc6551 registry ✅ = we deploy (0x8b7900E312111A7e94C6006BB9e468A54105Eb1e)
 ## erc6551 account implementation
 ## entrypoint
 
 # filecoin 
 ## funds ✅
-## erc6551 registry
-## erc6551 account implementation
 ## entrypoint
